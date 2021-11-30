@@ -4,7 +4,7 @@ Jen Zieger
 ## Contents:
 - [Background](#Background)
 - [Problem Statement](#Problem-Statement)
-- [Evaluation](#Evaluation)
+- [Models and Metrics](#Models-and-Metrics)
 - [Libraries](#Libraries)
 - [Datasets](#Datasets)
 - [Data Dictionary](#Data-Dictionary)
@@ -13,37 +13,44 @@ Jen Zieger
 - [Evaluation](#Evaluation)
 - [Conclusions and Recommendations](#Conclusions-and-Recommendations)
 
-**Background**
+<a name="Background"></a>
+## Background <br>
 Ames, Iowa is located about 30 miles north of Des Moines, Iowa, and is home to Iowa State University. According to the U.S. Census Bureau, the population in Ames in 2020 was 66,427. From 2015 to 2019, there were an estimated 25K+ households, and the owner-occupied housing unit rate was approximately 40.7%.([1](https://www.census.gov/quickfacts/amescityiowa)) 
 
-**Problem Statement** <br>
+<a name="Problem-Statement"></a>
+## Problem Statement <br>
 As a new member of a residential real estate firm, I've been tasked with building a model that can be used in-house to determine what features and model best predict housing prices and potentially build out the model to sell to other companies across the country. For the beta version of the model, I will use a dataset containing assessed values for individual residential properties sold in Ames, IA, from 2006 to 2010.
 
-**Evaluation** <br>
+<a name="Models-and-Metrics"></a>
+## Models and Metrics <br>
 To build my model, I will use train-test split, cross-validation, and grid searching for hyperparameters, exploratory data analysis, and correlation analysis of independent features. I will be using different supervised learning regression techniques, including Linear, Ridge, and Lasso, to my model. I will be evaluating my model with R-squared score and Root Mean Squared Error.  
 
-**Libraries**
-<br>I used the following libraries in this project.
+<a name="Libraries"></a>
+## Libraries <br>
+I used the following libraries in this project.
 
 ![libraries](./images/libraries.png)
 
-**Datasets**
-<br>I used the following datasets for building and testing my model.
+<a name="Datasets"></a>
+## Datasets <br>
+I used the following datasets for building and testing my model.
 
- [`train.csv`]('./datasets/train.csv'): Train Dataset
- [`test.csv`]('./datasets/test.csv): Test Dataset
+ [train.csv]('./datasets/train.csv'): Train Dataset <br>
+ [test.csv]('./datasets/test.csv): Test Dataset
 
 - The train dataset has 2051 rows, representing individual houses in Ames and 81 columns representing housing features.
 - The test dataset has 878 rows and 80 columns. 
 - SalePrice is the one column that is in the train dataset and not in the test dataset. Thus, the difference in the number of columns. 
 - The feature columns had a mix of continuous, discrete, and ordinal values. 
 
-**Data Dictionary**
+<a name="Data-Dictionary"></a>
+## Data Dictionary <br>
 To view the data dictionary, please go to the following link. 
 
 ([data_dictionary](http://jse.amstat.org/v19n3/decock/DataDocumentation.txt))
 
-**Modeling Process**
+<a name="Modeling-Process"></a>
+## Modeling Process <br>
 
 In order to build the best regression model possible, I followed the following steps. Of course, these steps are not linear, as I had to revisit some of them throughout the project. 
 
@@ -79,7 +86,8 @@ Evaluation <br>
    - R-Squared Score
    - Root Mean Squared Error 
 
-**Visualization**
+<a name="Data-Visualization"></a>
+## Visualization <br>
 
 ![correlation](./images/correlation.png)
 
@@ -93,8 +101,8 @@ These are features had a correlation with Sale Price of 0.5 and higher.
 
 These were the top three features in the correlation matrix. These charts show the positive linear relationship between Sale Price and these features. 
 
-
-**Evaluation**
+<a name="Evaluation"></a>
+## Evaluation <br>
 
 ![results](./images/results.png)
 
@@ -116,8 +124,8 @@ For every 1 unit increase in Lot Area and Lot Frontage, I would expect there to 
 
 For every 1 unit increase in Total Rooms Above Ground and Wood Deck Square Feet, I would expect there to be a decrease in the value of a home by about $2,130, all else being constant. 
 
-
-**Conclusions and Recommendations**
+<a name="Conclusions-and-Recommendations"></a>
+## Conclusions and Recommendations <br>
 
 The Ridge Regression model was the best model for predicting pricing and reducing error. The model predicted 92% of the testing housing sale prices with a 22,536 RMSE. 
 
