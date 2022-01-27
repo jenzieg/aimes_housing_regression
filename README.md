@@ -106,7 +106,7 @@ These were the top three features in the correlation matrix. These charts show t
 
 ![results](./images/results.png)
 
-The Ridge Regression model with GridsearchCV was the best for my model. This model predicts 92% of the variance in the test set Sale Price compared to a model with no predictors. While the model could be off by potentially \\$22,536, it is over \$57,400 lower than the baseline model.
+The Ridge Regression model with GridsearchCV was the best for my model. This model predicts 92% of the variance in the test set Sale Price compared to a model with no predictors. While the model could be off by potentially \$22,536, it is over \$57,400 lower than the baseline model.
 
 ![scatter](./images/scatter.png)
 
